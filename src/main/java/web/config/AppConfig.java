@@ -47,7 +47,6 @@ public class AppConfig {
 
    private Properties hibProperties() {
       Properties properties = new Properties();
-      properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
       properties.put("hibernate.show_sql", env.getRequiredProperty("hibernate.show_sql"));
       return properties;
    }

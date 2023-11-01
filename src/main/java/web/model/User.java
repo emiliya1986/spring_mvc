@@ -18,6 +18,8 @@ public class User {
     private String firstName;
     @Column(name = "lastName")
     private String lastName;
+    @Column(name = "age")
+    private byte age;
 
     public User(String firstName, String lastName) {
         this.firstName = firstName;
@@ -50,5 +52,22 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public byte getAge() {
+        return age;
+    }
+
+    public void setAge(byte age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + firstName + '\'' +
+                ", surname='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
